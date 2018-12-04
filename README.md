@@ -1,5 +1,7 @@
 # TTC-Connect XSS Demo
 
+## Requirements
+[Intall Node JS](https://nodejs.org/en/)
 ## Instructions
 
 Install necessary packages
