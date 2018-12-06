@@ -40,7 +40,7 @@ The following components needs to be installed to replicate the demo
     
   * HTML Attribute Javascript Test
     ```
-    <svg onload=alert(1)>
+    <img src="http://inexist.ent" onerror="javascript:alert(1)"/>
     ```
   Enter the above codes in the [TT-Connect](http://www.ttconnect.gov.tt/gortt/portal/ttconnect/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOK9A40MTD0tjQ38Aw0sDYyCPA1dDUy9jd29DIAKIoEKDHAARwNC-r3ACvDoB1pgVOTr7JuuH1WQWJKhm5mXlq8fUVKSnJ-Xl5pcoh-uH4VmR5C7G9AOV1NDD-8wY6AhUAV47CjIjajySQv2BACEOlbd/dl5/d5/L2dBISEvZ0FBIS9nQSEh/) Website as our example. search bar to see the result. 
   
@@ -141,7 +141,7 @@ Usable Minimized Version
    ```
  * Escaped HTML Attribute Javascript Test
    ```
-   <svg onload=alert(1)>
+   <img src="http://inexist.ent" onerror="javascript:alert(1)"/>
    ```
 ### XSS Filter Bypass
 Although X-XSS-Protection designed into browser works for common attacks, there exits [bypasses](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet) that allow hackers to execute their malicious scripts.
